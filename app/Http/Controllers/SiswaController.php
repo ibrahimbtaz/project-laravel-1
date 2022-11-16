@@ -3,13 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Siswa;
+use App\Models\Kelas;
+use Illuminate\Http\Request;
 
 class SiswaController extends Controller
 {
     public function index(){
-        return view('data.siswa',[
-            "data_siswa" => Siswa::all()
-        ]);
+        // return view('data.siswa',[
+        //     "data_siswa" => Siswa::all()
+        // ]);
+
+        $data_siswa = Siswa::with('kelas')->get();
+        $data_kelas = Kelas::with('siswa')->get();
+        return view('data.siswa',compact('data_siswa','data_kelas'));
     }
 
     public function show (Siswa $siswa){

@@ -24,9 +24,7 @@ Route::get('/home', function () {
 });
 
 Route::get('/siswa', [SiswaController:: class, 'index']);
-
 Route::get('/detail_siswa/{siswa}',[SiswaController::class,'show']);
 
 Route::get('/kelas', [KelasController:: class, 'index']);
-
 Route::get('/detail_kelas/{kelas}',[KelasController::class,'show']);
