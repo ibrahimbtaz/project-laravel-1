@@ -23,8 +23,13 @@ Route::get('/home', function () {
     return view('data.home');
 });
 
-Route::get('/siswa', [SiswaController:: class, 'index']);
-Route::get('/detail_siswa/{siswa}',[SiswaController::class,'show']);
+route::group(['prefix' => '/siswa'], function(){
+    Route::get('/all', [SiswaController:: class, 'index']);
+    Route::get('/detail/{siswa}',[SiswaController::class,'show']);
+});
 
-Route::get('/kelas', [KelasController:: class, 'index']);
-Route::get('/detail_kelas/{kelas}',[KelasController::class,'show']);
+route::group(['prefix' => '/kelas'], function(){
+    Route::get('/all', [KelasController:: class, 'index']);
+    Route::get('/detail/{kelas}',[KelasController::class,'show']);
+});
+

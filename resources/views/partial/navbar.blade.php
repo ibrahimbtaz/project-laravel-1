@@ -8,8 +8,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link active text-light" aria-current="page" href="/home">Home</a>
-                <a class="nav-link text-light" href="/siswa">Siswa</a>
-                <a class="nav-link text-light" href="/kelas">Kelas</a>
+                <a class="nav-link text-light" href="/siswa/all">Siswa</a>
+                <a class="nav-link text-light" href="/kelas/all">Kelas</a>
                 <a class="nav-link disabled text-light">About</a>
             </div>
         </div>

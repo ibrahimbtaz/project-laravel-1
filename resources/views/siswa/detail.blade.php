@@ -30,7 +30,7 @@
                             </div>
                             <br>
                             <div class="form-group">
-                                <a type="button" class="btn btn-warning" href="/siswa">Back</a>
+                                <a type="button" class="btn btn-warning" href="/siswa/all">Back</a>
                             </div>
                         </form>
                     </div>

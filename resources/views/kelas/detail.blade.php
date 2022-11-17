@@ -20,7 +20,7 @@
                         </div>
                         <br>
                         <div class="form-group">
-                            <a type="button" class="btn btn-warning" href="/kelas">Back</a>
+                            <a type="button" class="btn btn-warning" href="/kelas/all">Back</a>
                         </div>
                     </form>
                 </div>
