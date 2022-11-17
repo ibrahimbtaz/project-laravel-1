@@ -9,11 +9,9 @@ use App\Models\Kelas;
 class Siswa extends Model
 {
     use HasFactory;
-    protected $table = 'siswas';
-
-    protected $fillable = ['id','id_kelas','nis','nama','alamat'];
+    protected $fillable = ['id','kelas_id','nis','nama','alamat'];
 
     public function kelas(){
-        return $this->belongsTo(Kelas::class, 'id');
+        return $this->belongsTo(Kelas::class);
     }
 }
