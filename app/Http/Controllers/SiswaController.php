@@ -15,11 +15,11 @@ class SiswaController extends Controller
 
         $data_siswa = Siswa::with('kelas')->get();
         $data_kelas = Kelas::with('siswa')->get();
-        return view('data.siswa',compact('data_siswa','data_kelas'));
+        return view('siswa.siswa',compact('data_siswa','data_kelas'));
     }
 
     public function show (Siswa $siswa){
-        return view('data.detail_siswa',[
+        return view('siswa.detail_siswa',[
             "siswa" => $siswa
         ]);
     }
