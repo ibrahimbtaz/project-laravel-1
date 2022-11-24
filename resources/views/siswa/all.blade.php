@@ -6,7 +6,14 @@
             <div class="col-ad-12">
                 <h1 align="center">Data Siswa</h1>
                 <div class="card">
+                    @if (session()->has('sucess'))
+                            <div class="alert alert-sucess col-lg-12" role="alert">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                     <div class="card-body">
+                        <a type="button" class="btn btn-primary float-end" href="create">Tambah Data Baru</a>
+                        <br><br>
                         <table class="table table-dark table-striped">
                             <thead>
                                 <tr align="center">
@@ -18,8 +25,8 @@
                                     <th scope="col">Alamat</th>
                                     <th scope="col">Aksi</th>
                                     <!-- <th scope="col">Tanggal Lahir</th>
-                                    <th scope="col">Foto</th>
-                                    <th scope="col">Aksi</th> -->
+                                                            <th scope="col">Foto</th>
+                                                            <th scope="col">Aksi</th> -->
 
                                 </tr>
                             </thead>
@@ -36,6 +43,15 @@
                                             <a type="button" class="btn btn-warning"
                                                 href="detail/{{ $siswa->id }}">Detail
                                                 Page</a>
+                                            <a type="button" class="btn btn-primary" href="edit/{{ $siswa->id }}">Edit
+                                                Page</a>
+                                            <form action="/siswa/delete/{{ $siswa->id }}" method="post"
+                                                class="d-inline">
+                                                @method('delete')
+                                                @csrf
+                                                <button class="btn btn-danger"
+                                                    onclick="return  confirm('Apakah Anda Yakin') ">Hapus</button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach

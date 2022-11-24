@@ -9,7 +9,8 @@ use App\Models\Kelas;
 class Siswa extends Model
 {
     use HasFactory;
-    protected $fillable = ['id','kelas_id','nis','nama','alamat'];
+    // protected $fillable = ['id','kelas_id','nis','nama','alamat'];
+    protected $guarded = ['id'];
 
     public function kelas(){
         return $this->belongsTo(Kelas::class);
