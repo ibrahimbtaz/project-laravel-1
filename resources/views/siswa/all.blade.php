@@ -5,12 +5,12 @@
         <div class="row">
             <div class="col-ad-12">
                 <h1 align="center">Data Siswa</h1>
+                @if (session()->has('Successfully'))
+                    <div class="alert alert-success col-lg-12" role="alert">
+                        {{ session('Successfully') }}
+                    </div>
+                @endif
                 <div class="card">
-                    @if (session()->has('sucess'))
-                            <div class="alert alert-sucess col-lg-12" role="alert">
-                                {{ session('success') }}
-                            </div>
-                        @endif
                     <div class="card-body">
                         <a type="button" class="btn btn-primary float-end" href="create">Tambah Data Baru</a>
                         <br><br>
@@ -25,8 +25,8 @@
                                     <th scope="col">Alamat</th>
                                     <th scope="col">Aksi</th>
                                     <!-- <th scope="col">Tanggal Lahir</th>
-                                                            <th scope="col">Foto</th>
-                                                            <th scope="col">Aksi</th> -->
+                                                                    <th scope="col">Foto</th>
+                                                                    <th scope="col">Aksi</th> -->
 
                                 </tr>
                             </thead>
